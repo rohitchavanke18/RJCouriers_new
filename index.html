@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RJCouriers - Monolithic</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            color: #ff4d6d;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #ff4d6d;
+            margin-top: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #ff4d6d;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e03b56;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .footer {
+            text-align: center;
+            color: gray;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MONOLITHIC : RJCouriers</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Schedule a Delivery</h2>
+            <form action="booking.php" method="POST">
+                <input type="text" name="sender" placeholder="Sender Name" required>
+                <input type="text" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="receiver" placeholder="Receiver Address" required>
+                <input type="number" name="distance" placeholder="Distance (in km)" required>
+                <button type="submit">📦 Book Now</button>
+            </form>
+        </div>
+
+        <div class="section">
+            <h2>Track Your Package</h2>
+            <form action="tracking.php" method="POST">
+                <input type="text" name="track_id" placeholder="Enter Tracking ID" required>
+                <button type="submit">🔍 Track</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 RJCouriers. All rights reserved.
+    </div>
+</body>
+</html>
